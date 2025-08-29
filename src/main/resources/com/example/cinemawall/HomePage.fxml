@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="792.0" prefWidth="1341.6" style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cinemawall.HomeController">
+    <!-- Header Section -->
+    <AnchorPane fx:id="AppLabel" prefHeight="50.0" prefWidth="1200.0" visible="false" AnchorPane.topAnchor="0.0">
+        <VBox alignment="CENTER" spacing="5.0">
+            <Label text="CINEWALL" textFill="#F1F1F1">
+                <font>
+                    <Font name="Showcard Gothic" size="28.0" />
+                </font>
+            </Label>
+            <Separator style="-fx-background-color: #F1F1F1;" />
+        </VBox>
+    </AnchorPane>
+
+    <!-- Search and Movies/Series Section -->
+    <AnchorPane fx:id="mainContentAnchorPane" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="100.0">
+        <!-- Include Search and Movies/Series Sections Here -->
+        <!-- Search Section -->
+        <AnchorPane prefWidth="400.0" style="-fx-background-color: #292929; -fx-padding: 10;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <VBox spacing="10.0">
+                <HBox spacing="8.0">
+                    <TextField fx:id="searchTextField" promptText="Search Movies or Series" style="-fx-background-color: #1C1C1C; -fx-text-fill: #FFFFFF; -fx-border-color: #FF6347;" />
+                    <Button fx:id="searchButton" style="-fx-background-color: #FF6347; -fx-text-fill: #00000;" text="Search" />
+                </HBox>
+                <VBox fx:id="searchResultsVBox" prefHeight="200.0" style="-fx-background-color: #292929; -fx-padding: 10;">
+                    <FlowPane fx:id="searchResultsFlowPane" hgap="10" style="-fx-background-color: #121212; -fx-padding: 20; -fx-alignment: center;" vgap="10" />
+                </VBox>
+            </VBox>
+        </AnchorPane>
+
+        <!-- Movies and Series Section -->
+        <AnchorPane fx:id="moviesSeriesAnchorPane" style="-fx-background-color: #292929; -fx-padding: 10; -fx-border-color: #FF6347; -fx-border-width: 2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <VBox spacing="15.0">
+                <VBox alignment="CENTER" spacing="5.0">
+                    <Label text="Movies" textFill="#F1F1F1">
+                        <font>
+                            <Font name="Showcard Gothic" size="20.0" />
+                        </font>
+                    </Label>
+                    <Separator style="-fx-background-color: #F1F1F1;" />
+                </VBox>
+                <!-- Existing Movies and Series Layout Here -->
+                <VBox spacing="10.0">
+                    <!-- Movies -->
+                    <GridPane alignment="CENTER" hgap="12" vgap="12">
+                        <columnConstraints>
+                            <ColumnConstraints halignment="CENTER" />
+                            <ColumnConstraints halignment="CENTER" />
+                            <ColumnConstraints halignment="CENTER" />
+                            <ColumnConstraints halignment="CENTER" />
+                        </columnConstraints>
+                        <ImageView fx:id="moviePosterImageView1" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="0" />
+                        <Hyperlink fx:id="movieTitleHyperlink1" style="-fx-text-fill: #A0C4FF;" text="Movie Title 1" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <ImageView fx:id="moviePosterImageView2" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="1" />
+                        <Hyperlink fx:id="movieTitleHyperlink2" style="-fx-text-fill: #A0C4FF;" text="Movie Title 2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <ImageView fx:id="moviePosterImageView3" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="2" />
+                        <Hyperlink fx:id="movieTitleHyperlink3" style="-fx-text-fill: #A0C4FF;" text="Movie Title 3" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <ImageView fx:id="moviePosterImageView4" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="3" />
+                        <Hyperlink fx:id="movieTitleHyperlink4" style="-fx-text-fill: #A0C4FF;" text="Movie Title 4" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+                    </GridPane>
+                    <Button fx:id="browseMoreMoviesButton" onAction="#browseMoreMovies" style="-fx-background-color: #FF6347; -fx-text-fill: #FFFFFF;" text="Browse More Movies" />
+                    <!-- Series -->
+                    <VBox alignment="CENTER" spacing="5.0">
+                        <Label text="Series" textFill="#F1F1F1">
+                            <font>
+                                <Font name="Showcard Gothic" size="20.0" />
+                            </font>
+                        </Label>
+                        <Separator style="-fx-background-color: #F1F1F1;" />
+                    </VBox>
+                    <GridPane alignment="CENTER" hgap="12" vgap="12">
+                        <ImageView fx:id="seriesPosterImageView1" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="0" />
+                        <Hyperlink fx:id="seriesTitleHyperlink1" style="-fx-text-fill: #A0C4FF;" text="Series Title 1" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <ImageView fx:id="seriesPosterImageView2" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="1" />
+                        <Hyperlink fx:id="seriesTitleHyperlink2" style="-fx-text-fill: #A0C4FF;" text="Series Title 2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <ImageView fx:id="seriesPosterImageView3" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="2" />
+                        <Hyperlink fx:id="seriesTitleHyperlink3" style="-fx-text-fill: #A0C4FF;" text="Series Title 3" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <ImageView fx:id="seriesPosterImageView4" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="3" />
+                        <Hyperlink fx:id="seriesTitleHyperlink4" style="-fx-text-fill: #A0C4FF;" text="Series Title 4" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+                    </GridPane>
+                    <Button fx:id="browseMoreSeriesButton" onAction="#browseMoreSeries" style="-fx-background-color: #FF6347; -fx-text-fill: #FFFFFF;" text="Browse More Series" />
+                </VBox>
+            </VBox>
+        </AnchorPane>
+    </AnchorPane>
+
+    <!-- Profile Section -->
+    <AnchorPane fx:id="profileAnchorPane" prefHeight="792.0" prefWidth="1341.6" style="-fx-background-color: #292929; -fx-padding: 20;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <VBox spacing="20.0">
+            <!-- User Information -->
+            <HBox alignment="CENTER_LEFT" spacing="20.0">
+                <ImageView fx:id="userImageView" fitHeight="100.0" fitWidth="100.0" style="-fx-background-color: #FFFFFF;" />
+                <VBox>
+                    <Label fx:id="userNameLabel" style="-fx-text-fill: #FFFFFF; -fx-font-size: 18px;" text="Username" />
+                </VBox>
+            </HBox>
+            <Separator />
+
+            <!-- Favorite Movies Row -->
+            <Label style="-fx-text-fill: #FF6347; -fx-font-size: 16px;" text="Favorite Movies" />
+            <GridPane alignment="CENTER" hgap="12" vgap="12">
+                <ImageView fx:id="favMovieImage1" fitHeight="150.0" fitWidth="100.0" GridPane.columnIndex="0" />
+                <Hyperlink fx:id="favMovieLink1" text="Favorite Movie 1" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <ImageView fx:id="favMovieImage2" fitHeight="150.0" fitWidth="100.0" GridPane.columnIndex="1" />
+                <Hyperlink fx:id="favMovieLink2" text="Favorite Movie 2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <ImageView fx:id="favMovieImage3" fitHeight="150.0" fitWidth="100.0" GridPane.columnIndex="2" />
+                <Hyperlink fx:id="favMovieLink3" text="Favorite Movie 3" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <ImageView fx:id="favMovieImage4" fitHeight="150.0" fitWidth="100.0" GridPane.columnIndex="3" />
+                <Hyperlink fx:id="favMovieLink4" text="Favorite Movie 4" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <columnConstraints>
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+            </GridPane>
+            <GridPane alignment="CENTER" hgap="12" vgap="12">
+                <ImageView fx:id="favSeriesImage1" fitHeight="150.0" fitWidth="100.0" GridPane.columnIndex="0" />
+                <Hyperlink fx:id="favSeriesLink1" text="Favorite Series 1" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <ImageView fx:id="favSeriesImage2" fitHeight="150.0" fitWidth="100.0" GridPane.columnIndex="1" />
+                <Hyperlink fx:id="favSeriesLink2" text="Favorite Series 2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <ImageView fx:id="favSeriesImage3" fitHeight="150.0" fitWidth="100.0" GridPane.columnIndex="2" />
+                <Hyperlink fx:id="favSeriesLink3" text="Favorite Series 3" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <ImageView fx:id="favSeriesImage4" fitHeight="150.0" fitWidth="100.0" GridPane.columnIndex="3" />
+                <Hyperlink fx:id="favSeriesLink4" text="Favorite Series 4" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <columnConstraints>
+                    <ColumnConstraints />
+                    <ColumnConstraints />
+                    <ColumnConstraints />
+                    <ColumnConstraints />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints />
+                    <RowConstraints />
+                </rowConstraints>
+            </GridPane>
+
+            <!-- Recently Rated Row -->
+            <Label style="-fx-text-fill: #FF6347; -fx-font-size: 16px;" text="Recently Rated" />
+            <GridPane alignment="CENTER" hgap="12" vgap="12">
+                <ImageView fx:id="ratedMovieImage1" fitHeight="150.0" fitWidth="100.0" GridPane.columnIndex="0" />
+                <Hyperlink fx:id="ratedMovieLink1" text="Rated Movie 1" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <ImageView fx:id="ratedMovieImage2" fitHeight="150.0" fitWidth="100.0" GridPane.columnIndex="1" />
+                <Hyperlink fx:id="ratedMovieLink2" text="Rated Movie 2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <ImageView fx:id="ratedMovieImage3" fitHeight="150.0" fitWidth="100.0" GridPane.columnIndex="2" />
+                <Hyperlink fx:id="ratedMovieLink3" text="Rated Movie 3" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <ImageView fx:id="ratedMovieImage4" fitHeight="150.0" fitWidth="100.0" GridPane.columnIndex="3" />
+                <Hyperlink fx:id="ratedMovieLink4" text="Rated Movie 4" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <columnConstraints>
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+            </GridPane>
+        </VBox>
+      <Button layoutX="800.0" layoutY="26.0" mnemonicParsing="false" onAction="#loadHomepage" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: #FF6347;" text="Back to HomePage" />
+    </AnchorPane>
+    <!-- Watchlist Section -->
+
+    <AnchorPane fx:id="watchlistAnchorPane" prefHeight="792.0" prefWidth="1341.6" style="-fx-background-color: #292929; -fx-padding: 20;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1">
+
+        <ScrollPane fx:id="watchlistScrollPane" fitToWidth="true" pannable="true" style="-fx-background-color: black;" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <content>
+                <GridPane fx:id="watchlistGridPane" alignment="TOP_CENTER" hgap="10" style="-fx-background-color: #292929; -fx-padding: 10;" vgap="10">
+                </GridPane>
+            </content>
+        </ScrollPane>
+
+
+    </AnchorPane>
+
+
+    <!-- Movie/series Details -->
+    <AnchorPane fx:id="MovieOrSeriesDetails" prefHeight="763.2" prefWidth="1341.6" style="-fx-background-color: #292929; -fx-padding: 20;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+    <VBox prefHeight="740.8" prefWidth="1341.6" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <!-- Movie/Series Poster -->
+        <ImageView fx:id="posterImageView" fitHeight="300.0" fitWidth="200.0" style="-fx-border-radius: 5;" />
+        <!-- Movie/Series Title -->
+        <Label fx:id="titleLabel" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Movie/Series Title" textFill="#FF6347" />
+        <!-- Movie/Series Description -->
+        <Label fx:id="descriptionLabel" style="-fx-font-size: 14px; -fx-text-fill: #A0C4FF;" text="Description of the movie or series goes here..." wrapText="true" />
+
+           <!-- Additional Movie/Series Info -->
+        <HBox spacing="10.0">
+            <Label style="-fx-font-size: 16px; -fx-font-family: 'Verdana';" text="Duration:" textFill="#FF6347" />
+            <Label fx:id="durationLabel" style="-fx-font-size: 16px; -fx-text-fill: #A0C4FF;" text="Duration" />
+        </HBox>
+        <HBox spacing="10.0">
+            <Label style="-fx-font-size: 16px; -fx-font-family: 'Verdana';" text="Director:" textFill="#FF6347" />
+            <Label fx:id="directorLabel" style="-fx-font-size: 16px; -fx-text-fill: #A0C4FF;" text="Director Name" />
+        </HBox>
+        <HBox spacing="10.0">
+            <Label style="-fx-font-size: 16px; -fx-font-family: 'Verdana';" text="Cast:" textFill="#FF6347" />
+            <Label fx:id="castLabel" style="-fx-font-size: 16px; -fx-text-fill: #A0C4FF;" text="Cast Names" />
+        </HBox>
+        <HBox spacing="10.0">
+            <Label style="-fx-font-size: 16px; -fx-font-family: 'Verdana';" text="Released Year:" textFill="#FF6347" />
+            <Label fx:id="releasedYearLabel" style="-fx-font-size: 16px; -fx-text-fill: #A0C4FF;" text="Year" />
+        </HBox>
+        <HBox spacing="10.0">
+            <Label style="-fx-font-size: 16px; -fx-font-family: 'Verdana';" text="Genres:" textFill="#FF6347" />
+            <Label fx:id="genresLabel" style="-fx-font-size: 16px; -fx-text-fill: #A0C4FF;" text="Genres" />
+        </HBox>
+
+           <!-- Rating Section -->
+        <HBox spacing="10.0">
+            <Label style="-fx-font-size: 16px; -fx-font-family: 'Verdana';" text="Your Rating:" textFill="#FF6347" />
+            <ComboBox fx:id="ratingComboBox" />
+        </HBox>
+        <HBox spacing="10.0">
+            <Label style="-fx-font-size: 16px; -fx-font-family: 'Verdana';" text="Your Rating:" textFill="#FF6347" />
+            <Label fx:id="YourRatingLabel" style="-fx-font-size: 16px; -fx-text-fill: #A0C4FF;" text="Rating" />
+        </HBox>
+        <HBox spacing="10.0">
+            <Label style="-fx-font-size: 16px; -fx-font-family: 'Verdana';" text="Rating:" textFill="#FF6347" />
+            <Label fx:id="ratingLabel" style="-fx-font-size: 16px; -fx-text-fill: #A0C4FF;" text="Rating" />
+        </HBox>
+
+           <!-- Buttons for Favourites and Watchlist -->
+        <HBox spacing="15.0" />
+         <Button fx:id="addToFavouritesButton" style="-fx-background-color: #FF6347; -fx-text-fill: #000000;" text="Add to Favourites" />
+         <Button fx:id="addToWatchlistButton" style="-fx-background-color: #FF6347; -fx-text-fill: #000000;" text="Add to Watchlist" />
+    </VBox>
+      <Button layoutX="925.0" layoutY="41.0" mnemonicParsing="false" onAction="#loadHomepage" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: #FF6347;" text="Back to Homepage" />
+</AnchorPane>
+    <!-- Browse More movies and Series -->
+    <AnchorPane fx:id="browseMoreMoviesAnchorPane" prefHeight="792.0" prefWidth="1341.6" style="-fx-background-color: #292929; -fx-padding: 20;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <ScrollPane fx:id="browseMoreMoviesScrollPane" fitToWidth="true" style="-fx-background-color: #292929; -fx-padding: 20;">
+        <content>
+        <VBox fx:id="browseVBox" spacing="20.0" style="-fx-background-color: #292929;">
+            <Label style="-fx-text-fill: #FF6347; -fx-font-size: 16px;" text="Browse More Movies" />
+            <GridPane fx:id="browseMoviesGridPane" hgap="20.0" vgap="20.0">
+                <!-- Movie 1 -->
+                <ImageView fx:id="filmPosterImageView1" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Hyperlink fx:id="filmTitleHyperlink1" style="-fx-text-fill: #A0C4FF;" text="Movie Title 1" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+                <!-- Movie 2 -->
+                <ImageView fx:id="filmPosterImageView2" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Hyperlink fx:id="filmTitleHyperlink2" style="-fx-text-fill: #A0C4FF;" text="Movie Title 2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <!-- Movie 3 -->
+                <ImageView fx:id="filmPosterImageView3" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                <Hyperlink fx:id="filmTitleHyperlink3" style="-fx-text-fill: #A0C4FF;" text="Movie Title 3" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+                <!-- Movie 4 -->
+                <ImageView fx:id="filmPosterImageView4" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                <Hyperlink fx:id="filmTitleHyperlink4" style="-fx-text-fill: #A0C4FF;" text="Movie Title 4" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+                <!-- Movie 5 -->
+                <ImageView fx:id="filmPosterImageView5" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+                <Hyperlink fx:id="filmTitleHyperlink5" style="-fx-text-fill: #A0C4FF;" text="Movie Title 5" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+
+                <!-- Movie 6 -->
+                <ImageView fx:id="filmPosterImageView6" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Hyperlink fx:id="filmTitleHyperlink6" style="-fx-text-fill: #A0C4FF;" text="Movie Title 6" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+
+                <!-- Movie 7 -->
+                <ImageView fx:id="filmPosterImageView7" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Hyperlink fx:id="filmTitleHyperlink7" style="-fx-text-fill: #A0C4FF;" text="Movie Title 7" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                <!-- Movie 8 -->
+                <ImageView fx:id="filmPosterImageView8" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Hyperlink fx:id="filmTitleHyperlink8" style="-fx-text-fill: #A0C4FF;" text="Movie Title 8" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+
+                <!-- Movie 9 -->
+                <ImageView fx:id="filmPosterImageView9" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                <Hyperlink fx:id="filmTitleHyperlink9" style="-fx-text-fill: #A0C4FF;" text="Movie Title 9" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+
+                <!-- Movie 10 -->
+                <ImageView fx:id="filmPosterImageView10" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                <Hyperlink fx:id="filmTitleHyperlink10" style="-fx-text-fill: #A0C4FF;" text="Movie Title 10" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+
+                <!-- Movie 11 -->
+                <ImageView fx:id="filmPosterImageView11" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <Hyperlink fx:id="filmTitleHyperlink11" style="-fx-text-fill: #A0C4FF;" text="Movie Title 11" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+
+                <!-- Movie 12 -->
+                <ImageView fx:id="filmPosterImageView12" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Hyperlink fx:id="filmTitleHyperlink12" style="-fx-text-fill: #A0C4FF;" text="Movie Title 12" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                <!-- Movie 13 -->
+                <ImageView fx:id="filmPosterImageView13" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <Hyperlink fx:id="filmTitleHyperlink13" style="-fx-text-fill: #A0C4FF;" text="Movie Title 13" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+
+                <!-- Movie 14 -->
+                <ImageView fx:id="filmPosterImageView14" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                <Hyperlink fx:id="filmTitleHyperlink14" style="-fx-text-fill: #A0C4FF;" text="Movie Title 14" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+
+                <!-- Movie 15 -->
+                <ImageView fx:id="filmPosterImageView15" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                <Hyperlink fx:id="filmTitleHyperlink15" style="-fx-text-fill: #A0C4FF;" text="Movie Title 15" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <columnConstraints>
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+            </GridPane>
+        </VBox>
+        </content>
+</ScrollPane>
+      <Button layoutX="1000.0" layoutY="79.0" mnemonicParsing="false" onAction="#loadHomepage" prefHeight="26.0" prefWidth="121.0" style="-fx-background-color: #FF6347;" text="Back to Home" />
+    </AnchorPane>
+    <AnchorPane fx:id="browseMoreShowsAnchorPane" prefHeight="792.0" prefWidth="1341.6" style="-fx-background-color: #292929; -fx-padding: 20;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <ScrollPane fx:id="browseMoreSeriesScrollPane" fitToWidth="true" style="-fx-background-color: #292929; -fx-padding: 20; ">
+            <content>
+     <VBox fx:id="browseShowsVBox" spacing="20.0" style="-fx-background-color: #292929;">
+            <Label style="-fx-text-fill: #FF6347; -fx-font-size: 16px;" text="Browse More Series" />
+            <GridPane fx:id="browseShowsGridPane" hgap="20.0" vgap="20.0">
+                <!-- Movie 1 -->
+                <ImageView fx:id="showsPosterImageView1" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Hyperlink fx:id="showsTitleHyperlink1" style="-fx-text-fill: #A0C4FF;" text="show Title 1" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+                <!-- Movie 2 -->
+                <ImageView fx:id="showsPosterImageView2" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Hyperlink fx:id="showsTitleHyperlink2" style="-fx-text-fill: #A0C4FF;" text="show Title 2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <!-- Movie 3 -->
+                <ImageView fx:id="showsPosterImageView3" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                <Hyperlink fx:id="showsTitleHyperlink3" style="-fx-text-fill: #A0C4FF;" text="show Title 3" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+                <!-- Movie 4 -->
+                <ImageView fx:id="showsPosterImageView4" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                <Hyperlink fx:id="showsTitleHyperlink4" style="-fx-text-fill: #A0C4FF;" text="show Title 4" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+                <!-- Movie 5 -->
+                <ImageView fx:id="showsPosterImageView5" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+                <Hyperlink fx:id="showsTitleHyperlink5" style="-fx-text-fill: #A0C4FF;" text="show Title 5" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+
+                <!-- Movie 6 -->
+                <ImageView fx:id="showsPosterImageView6" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Hyperlink fx:id="showsTitleHyperlink6" style="-fx-text-fill: #A0C4FF;" text="show Title 6" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+
+                <!-- Movie 7 -->
+                <ImageView fx:id="showsPosterImageView7" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Hyperlink fx:id="showsTitleHyperlink7" style="-fx-text-fill: #A0C4FF;" text="show Title 7" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                <!-- Movie 8 -->
+                <ImageView fx:id="showsPosterImageView8" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Hyperlink fx:id="showsTitleHyperlink8" style="-fx-text-fill: #A0C4FF;" text="show Title 8" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+
+                <!-- Movie 9 -->
+                <ImageView fx:id="showsPosterImageView9" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                <Hyperlink fx:id="showsTitleHyperlink9" style="-fx-text-fill: #A0C4FF;" text="show Title 9" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+
+                <!-- Movie 10 -->
+                <ImageView fx:id="showsPosterImageView10" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                <Hyperlink fx:id="showsTitleHyperlink10" style="-fx-text-fill: #A0C4FF;" text="show Title 10" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+
+                <!-- Movie 11 -->
+                <ImageView fx:id="showsPosterImageView11" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <Hyperlink fx:id="showsTitleHyperlink11" style="-fx-text-fill: #A0C4FF;" text="show Title 11" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+
+                <!-- Movie 12 -->
+                <ImageView fx:id="showsPosterImageView12" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Hyperlink fx:id="showsTitleHyperlink12" style="-fx-text-fill: #A0C4FF;" text="show Title 12" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                <!-- Movie 13 -->
+                <ImageView fx:id="showsPosterImageView13" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <Hyperlink fx:id="showsTitleHyperlink13" style="-fx-text-fill: #A0C4FF;" text="show Title 13" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+
+                <!-- Movie 14 -->
+                <ImageView fx:id="showsPosterImageView14" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                <Hyperlink fx:id="showsTitleHyperlink14" style="-fx-text-fill: #A0C4FF;" text="show Title 14" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+
+                <!-- Movie 15 -->
+                <ImageView fx:id="showsPosterImageView15" fitHeight="200.0" fitWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                <Hyperlink fx:id="showsTitleHyperlink15" style="-fx-text-fill: #A0C4FF;" text="show Title 15" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                <columnConstraints>
+                    <ColumnConstraints />
+                    <ColumnConstraints />
+                    <ColumnConstraints />
+                    <ColumnConstraints />
+                    <ColumnConstraints />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints />
+                </rowConstraints>
+            </GridPane>
+        </VBox>
+            </content>
+    </ScrollPane>
+    <Button layoutX="1000.0" layoutY="79.0" mnemonicParsing="false" onAction="#loadHomepage" prefHeight="26.0" prefWidth="121.0" style="-fx-background-color: #FF6347;" text="Back to Home" />
+    </AnchorPane>
+
+
+    <!-- Profile Buttons -->
+    <AnchorPane fx:id="Sidebar" layoutX="1121.0" layoutY="100.0" prefWidth="200.0" style="-fx-background-color: #292929; -fx-padding: 10;" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.59999999999991" AnchorPane.topAnchor="100.0">
+        <VBox spacing="10.0">
+            <Button fx:id="profileButton" onAction="#showProfile" prefHeight="26.0" prefWidth="173.0" style="-fx-background-color: #FF6347; -fx-text-fill: #00000;" text="Profile" />
+            <Button fx:id="watchlistButton" onAction="#watchlist" prefHeight="26.0" prefWidth="174.0" style="-fx-background-color: #FF6347; -fx-text-fill: #00000;" text="Watchlist" />
+        </VBox>
+         <Button fx:id="logoutButton" layoutY="75.0" onAction="#logout" prefHeight="26.0" prefWidth="173.0" style="-fx-background-color: #FF6347; -fx-text-fill: #00000;" text="Logout" />
+    </AnchorPane>
+</AnchorPane>

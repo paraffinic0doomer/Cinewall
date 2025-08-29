@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7bb50f7a-b1f0-4116-a471-f21c38becced" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/cinemawall/DatabaseHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/cinemawall/HelloApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/cinemawall/HelloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/cinemawall/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/absolutecinema.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cine1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cine2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/cinemawall/HomePage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/cinemawall/forgot_password.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/cinemawall/hello-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/cinemawall/images/cine1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/cinemawall/images/cine2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/cinemawall/reset_password.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/cinemawall/signupPage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/cinemawall/verification_signup.fxml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2pZKjWBtU2kfnnJmUXTEubqLAnC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CineWall.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;E:/001 Java Project Practice/CinemaWall/src/main/java/com/example/cinemawall&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/001 Java Project Practice/CinemaWall/src/main/resources/com/example/cinemawall/images&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\001 Java Project Practice\CinemaWall\src\main\resources\com\example\cinemawall\images" />
+      <recent name="E:\001 Java Project Practice\CinemaWall\src\main\resources\com\example\cinemawall" />
+      <recent name="E:\001 Java Project Practice\CinemaWall\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="CineWall" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.example.cinemawall.HelloApplication" />
+      <module name="CinemaWall" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7bb50f7a-b1f0-4116-a471-f21c38becced" name="Changes" comment="" />
+      <created>1732968294804</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732968294804</updated>
+      <workItem from="1732968295736" duration="1877000" />
+      <workItem from="1732970194816" duration="2612000" />
+      <workItem from="1732972838504" duration="11419000" />
+      <workItem from="1733127219454" duration="11343000" />
+      <workItem from="1733139454338" duration="6586000" />
+      <workItem from="1733240862919" duration="8100000" />
+      <workItem from="1733250318499" duration="366000" />
+      <workItem from="1733250701143" duration="126000" />
+      <workItem from="1733250840126" duration="3835000" />
+      <workItem from="1733390811317" duration="992000" />
+      <workItem from="1733396663811" duration="2085000" />
+      <workItem from="1733411411727" duration="24355000" />
+      <workItem from="1733497195211" duration="13125000" />
+      <workItem from="1733572919622" duration="13956000" />
+      <workItem from="1733589685038" duration="15974000" />
+      <workItem from="1733678055991" duration="14000" />
+      <workItem from="1733678744368" duration="514000" />
+      <workItem from="1733745131454" duration="14876000" />
+      <workItem from="1733803885795" duration="959000" />
+      <workItem from="1733844494202" duration="1212000" />
+      <workItem from="1733847934645" duration="290000" />
+      <workItem from="1733850226696" duration="1976000" />
+      <workItem from="1733854115615" duration="561000" />
+      <workItem from="1733922963520" duration="153000" />
+      <workItem from="1733923260738" duration="1220000" />
+      <workItem from="1734020803263" duration="2183000" />
+      <workItem from="1734099779833" duration="19924000" />
+      <workItem from="1734127452956" duration="1565000" />
+      <workItem from="1734129474527" duration="2479000" />
+      <workItem from="1734136486897" duration="62000" />
+      <workItem from="1734191665059" duration="15735000" />
+      <workItem from="1734207747757" duration="125000" />
+      <workItem from="1734207882053" duration="15103000" />
+      <workItem from="1734225536867" duration="2811000" />
+      <workItem from="1734229579302" duration="939000" />
+      <workItem from="1741022183377" duration="305000" />
+      <workItem from="1741622915110" duration="7000" />
+      <workItem from="1741622939767" duration="8000" />
+      <workItem from="1743557376490" duration="108000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
